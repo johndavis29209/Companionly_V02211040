@@ -1,103 +1,122 @@
-# Companionly_V02211040
+# **Companionly_V02211040**
 
-## 🌐 [Visit Our Website](https://awesome-chess-447016-v7.wl.r.appspot.com/)
+## 🌐 [Live App](https://awesome-chess-447016-v7.wl.r.appspot.com/)
 
 <p align="center">
-  <img src="a.png" alt="homepage" width="60%">
+  <img src="a.png" alt="Companionly Homepage" width="60%">
 </p>
 
 ---
 
-## 📖 Introduction
-**Companionly** aims to bridge the gap between individuals and mental health resources, offering a **user-friendly, evidence-based platform** to help users manage their mental well-being. 
+## 📖 **Introduction**
+**Companionly** is a **user-friendly, evidence-based platform** designed to support mental well-being. It provides **interactive tools, guided activities, and real-time chat support** to help users manage stress, anxiety, and depression.
 
-With tools for **mood tracking, mindfulness exercises, crisis support, and community engagement**, Companionly addresses the growing need for mental health interventions in an **accessible, safe, and discreet** manner.
-
----
-
-## 🔍 Background & Literature Review
-Mental health concerns such as **stress, anxiety, and depression** affect millions of people worldwide, yet access to professional support is often limited. Mobile apps have emerged as a vital tool to provide **immediate, personalized support**.
-
-Companionly enhances these digital solutions by:
-- Offering an **intuitive interface**.
-- Fostering **community engagement**.
-- Providing **timely crisis resources**.
-- Utilizing **evidence-based materials** for users.
+### 🔹 **Key Features**  
+✔ **Personalized Mood Tracking** – Users receive tailored resources based on a guided questionnaire.  
+✔ **Mindfulness Exercises** – Guided breathing techniques and meditation activities.  
+✔ **Community Chat** – A secure space for real-time discussions with other users.  
+✔ **Resource Library** – Curated articles and self-help materials on mental health topics.  
+✔ **Crisis Support** – Instant access to emergency contacts and professional help.  
+✔ **Gamification & Rewards** – A **point-based system** encourages engagement and learning.  
 
 ---
 
-## 🛠 Methods
-Companionly was developed using the **Spring Boot** framework and integrates the following features:
+## 🔍 **Background & Motivation**
+Mental health disorders such as **stress, anxiety, and depression** affect millions worldwide, yet access to therapy and professional guidance remains limited. Mobile apps provide **immediate, scalable solutions** that empower users to take control of their well-being.
 
-✅ **Mood Tracker:** A guided questionnaire that provides **tailored resources** based on user input.  
-✅ **Mindfulness Tools:** Breathing exercises and **meditation guidance**.  
-✅ **Crisis Support:** Immediate access to **emergency resources**.  
-✅ **Community Forums:** Safe spaces for users to **engage with others**.  
-✅ **Rewards Program:** A **points system** to encourage engagement.  
+### **Companionly was built to:**  
+✅ **Break down barriers** to mental health support.  
+✅ **Provide accessible, evidence-based resources.**  
+✅ **Encourage peer engagement** in a **safe digital space.**  
+
+By leveraging **Spring Boot, Thymeleaf, WebSockets, and Google Cloud**, Companionly integrates multiple support systems into a single, user-friendly application.
 
 ---
 
-## 💬 Discussion
-Companionly **empowers users** to take control of their mental health while offering a **support system** through **community forums and professional resources**.
+## 🛠 **Technology Stack & Methods**
+Companionly is developed using modern web technologies to ensure **scalability, security, and ease of use**.
 
-The app’s:
-- **Evidence-based content**
-- **Real-time crisis management**
-- **Secure authentication & storage mechanisms**
-- **Rewards system for sustained engagement**  
+### **Tech Stack**
+- **Backend:** Spring Boot (Java), Spring WebSockets, Spring Security, JPA (Hibernate)
+- **Frontend:** Thymeleaf, Bootstrap, JavaScript (SockJS & STOMP)
+- **Database:** MySQL (JPA/Hibernate ORM)
+- **Deployment:** Google Cloud Platform (App Engine)
 
-were all successfully implemented using **Spring Boot and Thymeleaf**.
+### **Core Features & Implementation**
+✅ **Mood Tracker:**  
+- Users complete a questionnaire, and responses are stored in a database.  
+- The system calculates a **total score** to determine **recommended articles & activities**.  
+- If the score exceeds a threshold (e.g., 9+), **a pop-up suggests relevant resources.**  
 
-#### **Challenges & Learnings:**
+✅ **Live Chat (Real-Time WebSockets):**  
+- Implemented using **Spring WebSockets and STOMP**.  
+- Allows users to send and receive messages instantly.  
+- Includes **user join/leave notifications**.  
+
+✅ **Resource Library:**  
+- Structured as **broad topics → chapters → articles.**  
+- Covers stress, anxiety, depression, and coping strategies.  
+- Searchable and dynamically expandable.  
+
+✅ **Community Forum:**  
+- Users can engage in peer discussions in **a safe, moderated environment**.  
+- Integrated with a **secure authentication system**.  
+
+✅ **Crisis Support & Emergency Resources:**  
+- Quick access to emergency contacts.  
+- Displays **mental health hotline numbers based on location.**  
+
+---
+
+## 💬 **Challenges & Learnings**
 - Merging multiple modular applications into a **larger app** resulted in **unexpected bugs** and required extensive debugging.
 - Features that **worked well locally** behaved differently when **deployed on Google Cloud**, requiring **adjustments and optimizations**.
 
 ---
 
-## 📊 Results
-Key features such as the **mood tracker, crisis support resources, and community forums** were successfully **developed and integrated** into the app’s architecture.  
+## 📊 **Results & Achievements**
+- Successfully implemented **real-time chat, mood tracking, and crisis support**.  
+- Developed a **scalable, modular architecture** to allow **future expansion.**  
+- Deployed the app on **Google Cloud** for accessibility and reliability.  
 
-The **modular structure** of Companionly allows for **easy scalability** and ensures a **seamless user experience**.
-
+### **Screenshots**
 <p align="center">
-  <img src="b.png" alt="forums" width="60%">
+  <img src="b.png" alt="Community Forums" width="60%">
 </p>
 
 <p align="center">
-  <img src="c.png" alt="mood" width="60%">
+  <img src="c.png" alt="Mood Tracker" width="60%">
 </p>
 
 <p align="center">
-  <img src="d.png" alt="library" width="60%">
+  <img src="d.png" alt="Resource Library" width="60%">
 </p>
 
 <p align="center">
-  <img src="e.png" alt="chat" width="60%">
+  <img src="e.png" alt="Live Chat" width="60%">
 </p>
 
 ---
 
-## 🏆 Conclusion
-By focusing on **accessibility, scalability, and user-centered design**, Companionly offers an **effective digital solution** for mental health management.
+## 🏆 **Conclusion & Future Enhancements**
+Companionly is an **accessible, secure, and evidence-based** mental health platform designed to **empower users with knowledge and support.**  
 
-### **🚀 Future Enhancements:**
-✅ **Multilingual support**  
-✅ **Integration with mental health professionals**  
-✅ **Additional mental health assessments**  
+### 🚀 **Planned Future Features**  
+✅ **Multilingual Support** – Expanding accessibility for a **global audience**.  
+✅ **Professional Integration** – Connecting users with **licensed mental health professionals**.  
+✅ **AI-Powered Recommendations** – Personalized **article/activity suggestions** based on user data.  
+✅ **Advanced Forum Features** – **Anonymous posting & private group chats.**  
 
-Despite challenges, Companionly is **feature-packed, useful to the public, and ready for real-world deployment**. We are pleased with our product and hope you enjoy our presentation! 🎉
+Despite deployment challenges, Companionly is now **feature-complete, scalable, and ready for real-world use.** 🎉  
+
 ---
 
-
-
-## 🎥 Demo of Application
+## 🎥 **Demo of Application**
 [![Watch the Demo](https://img.youtube.com/vi/ljN1PBNk1CM/0.jpg)](https://www.youtube.com/watch?v=ljN1PBNk1CM)
 
+---
 
-
-
-
-## 📚 References
+## 📚 **References**
 1. Rajeev, A. (2021). *Build a Spring Boot chat app with TalkJS.* TalkJS.  
    🔗 [Read Here](https://talkjs.com/resources/how-to-add-chat-into-a-spring-boot-app/)
 
@@ -110,6 +129,6 @@ Despite challenges, Companionly is **feature-packed, useful to the public, and r
 ---
 
 ### 🔗 **Need Help?**  
-If you encounter any issues, feel free to **open an issue** on GitHub!  
+If you encounter any issues, feel free to **open an issue on GitHub**!  
 
-🚀 **Developed with Spring Boot & Thymeleaf | Hosted on Google Cloud**
+🚀 **Developed with Spring Boot & Thymeleaf | Hosted on Google Cloud**  
