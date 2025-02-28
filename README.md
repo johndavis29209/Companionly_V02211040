@@ -88,7 +88,8 @@ By focusing on **accessibility, scalability, and user-centered design**, Compani
 Despite challenges, Companionly is **feature-packed, useful to the public, and ready for real-world deployment**. We are pleased with our product and hope you enjoy our presentation! 🎉
 ---
 
-🎥 **[Demo of Application](Screencast_20250228_014510.mp4)**
+🎥 **Demo of Application:**  
+[![Watch the Demo](https://img.youtube.com/vi/yourvideoid/0.jpg)](https://youtu.be/yourvideoid)
 
 
 
