@@ -55,6 +55,10 @@ were all successfully implemented using **Spring Boot and Thymeleaf**.
 Key features such as the **mood tracker, crisis support resources, and community forums** were successfully **developed and integrated** into the app’s architecture.  
 
 The **modular structure** of Companionly allows for **easy scalability** and ensures a **seamless user experience**.
+![forums](b.png)
+![mood](c.png)
+![library](d.png)
+![chat](e.png)
 
 ---
 
