@@ -86,10 +86,7 @@ By focusing on **accessibility, scalability, and user-centered design**, Compani
 ✅ **Additional mental health assessments**  
 
 Despite challenges, Companionly is **feature-packed, useful to the public, and ready for real-world deployment**. We are pleased with our product and hope you enjoy our presentation! 🎉
-<p align="center">
-  <iframe src="Screencast_20250228_014510.mp4" alt"Demo of app">
-  </iframe>
-</p>
+![Demo of application]{Screencast_20250228_014510.mp4}
 ---
 
 ## 📚 References
