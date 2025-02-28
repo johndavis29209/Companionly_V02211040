@@ -2,8 +2,7 @@
 
 ## 🌐 [Visit Our Website](https://awesome-chess-447016-v7.wl.r.appspot.com/)
 
-https://github.com/johndavis29209/Companionly_V02211040/blob/main/a.png
-
+![homepage](a.png)
 ---
 
 ## 📖 Introduction
