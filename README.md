@@ -2,7 +2,10 @@
 
 ## 🌐 [Visit Our Website](https://awesome-chess-447016-v7.wl.r.appspot.com/)
 
-![homepage](a.png)
+<p align="center">
+  <img src="a.png" alt="homepage" width="60%">
+</p>
+
 ---
 
 ## 📖 Introduction
@@ -55,10 +58,22 @@ were all successfully implemented using **Spring Boot and Thymeleaf**.
 Key features such as the **mood tracker, crisis support resources, and community forums** were successfully **developed and integrated** into the app’s architecture.  
 
 The **modular structure** of Companionly allows for **easy scalability** and ensures a **seamless user experience**.
-![forums](b.png)
-![mood](c.png)
-![library](d.png)
-![chat](e.png)
+
+<p align="center">
+  <img src="b.png" alt="forums" width="60%">
+</p>
+
+<p align="center">
+  <img src="c.png" alt="mood" width="60%">
+</p>
+
+<p align="center">
+  <img src="d.png" alt="library" width="60%">
+</p>
+
+<p align="center">
+  <img src="e.png" alt="chat" width="60%">
+</p>
 
 ---
 
