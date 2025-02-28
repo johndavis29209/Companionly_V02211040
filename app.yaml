@@ -1,0 +1,10 @@
+runtime: java17
+instance_class: F2
+service: default
+
+env_variables:
+  SPRING_DATASOURCE_URL: jdbc:mysql://google/ordersDatabase?cloudSqlInstance=awesome-chess-447016-v7:us-central1:awesome-chess-447016-v7&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false
+  SPRING_DATASOURCE_USERNAME: root
+  SPRING_DATASOURCE_PASSWORD: root1
+entrypoint: "java -Dspring.datasource.url=${SPRING_DATASOURCE_URL} -Dspring.datasource.username=${SPRING_DATASOURCE_USERNAME} -Dspring.datasource.password=${SPRING_DATASOURCE_PASSWORD} -jar target/companionly.jar"
+

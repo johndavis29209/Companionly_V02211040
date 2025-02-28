@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - Stress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .img-top {
+            margin-left: 20%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+            padding-top: 4.5rem;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .library-ribbon {
+            padding: 1px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .library-ribbon .nav-pills .nav-link {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .library-ribbon .nav-pills .nav-link:hover,
+        .library-ribbon .nav-pills .nav-link:focus {
+            background-color: darkgreen;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<!-- header -->
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<div>
+
+    <div class="container">
+        <div class="article-container">
+            <div class="library-ribbon">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/library">Chapters</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/stress">Activities</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/stress_reading">Reading</a></li>
+                </ul>
+            <h1 class="article-title">The Science of Stress: How It Affects Your Body and Mind</h1>
+            <p class="article-meta">By <strong>John Davis</strong> | Published on <strong>February 18, 2025</strong></p>
+
+            <div class="article-content">
+                <img src="/images/scream.jpg" class="img-top" alt="the scream by Munch">
+
+                <h2>The Science of Stress</h2>
+                <p>The science of stress involves the body&#39;s complex response to perceived threats or challenges. When we encounter a stressor, such as a demanding situation or a perceived danger, our body initiates a <q>fight-or-flight</q> response. The brain&#39;s amygdala, a region responsible for processing emotional reactions, initiates a rapid response. It signals another part of the brain, the hypothalamus, to release stress hormones. These hormones, primarily cortisol and adrenaline, are released by the adrenal glands located on top of the kidneys. Adrenaline provides the body with a rush of available energy so that it has increased resources to deal with whatever the threat. Cortisol helps get that energy to the organs that most need it by turning off all non-essential activities.
+
+                    With the release of these hormones, a range of physical changes occur, including an increase in heart rate, blood pressure, and respiration rate ? these are all changes aimed at preparing the body for immediate action. The senses become heightened, and energy is redirected toward the muscles and brain.
+
+                    During the stress response, the body&#39;s digestive and immune systems temporarily shut down as resources are redirected towards the immediate threat. This response can be adaptive and beneficial in the short term, helping individuals react swiftly to challenges and perform better in certain situations. Indeed, the stress response is the body&#39;s way of helping individuals cope or react to a threat or a danger they are facing.
+
+                    But the problem is that the stress response is also activated by life&#39;s day-to-day stressors including long lines at the store when you&#39;re in a rush, traffic jams, money pressures, dealing with the challenges and demands posed by living with a chronic illness, conflicts with family, work deadlines, and the list goes on. Over time, these accumulating stressors can sometimes add up to chronic stress. And chronic stress, with the persistent release of stress hormones, can have adverse effects on long-term health, potentially leading to issues such as high blood pressure, suppressed immunity, and increased risk of chronic diseases.
+
+                    The impacts of chronic stress can also lead to other negative health consequences. The prefrontal cortex, the brain&#39;s executive control center, plays a crucial role in regulating and managing stress. It assesses the situation and sends signals to inhibit the stress response initiated by the amygdala. However, chronic stress can impair the prefrontal cortex&#39;s functioning, leading to difficulties in emotional regulation and decision-making. Long-term exposure to stress can also affect the brain&#39;s hippocampus, a region essential for memory and learning. Chronic stress can lead to the atrophy of hippocampal neurons, potentially impairing cognitive function, and memory.
+
+                    Understanding these physiological and neurological aspects of stress is crucial for managing it effectively in ways that promote brain health and resilience. While stress can be a normal and even beneficial response in the short term, chronic or excessive stress can have negative effects on physical and mental health.</p>
+
+                <h2>Key Stress Responses</h2>
+                <p>Stress response types refer to the varied ways in which individuals react to stressors, whether they are acute, chronic, or situational. As discussed above, when confronted with a stressor, the body initiates a <q>fight-or-flight</q> response. This involves the release of stress hormones like cortisol and adrenaline, leading to changes in heart rate, blood pressure, and other bodily functions to prepare for action.
+
+                    Emotional responses such as anxiety, fear, frustration, irritability, or sadness can manifest with stress. And stress can also impact cognitive functions like decision-making, memory, and concentration. Sometimes these feelings can produce physical symptoms that make you feel worse including headaches, muscle tension, nausea, indigestion, digestive problems, or shortness of breath.
+
+                    Stress can also influence behavior, leading to actions like increased alertness, withdrawal, procrastination, or unhealthy coping mechanisms such as overeating or substance abuse. According to the Mental Health Foundation, a person may also be indecisive or inflexible, or have problems getting to sleep or staying asleep.</p>
+
+                <h2>Types of Stress</h2>
+                <p>Stress is a multifaceted phenomenon, and understanding the various stress types is essential for comprehending the diverse ways it can impact our lives, ranging from short-lived bouts of acute stress to the sometimes-debilitating effects of chronic stress.
+
+                    <ul>
+                   <li><strong> Acute Stress:</strong> Acute stress is a short-term, intense reaction to a specific event or situation. It is a normal response that helps individuals cope with immediate challenges. Once the stressor is resolved, the stress typically dissipates.</li>
+
+                <li><strong>Chronic Stress:</strong> Chronic stress results from ongoing, persistent stressors, such as long-term work-related pressure, financial problems, dealing with health conditions, or ongoing relationship difficulties. When left unmanaged, chronic stress can lead to health issues.</li>
+
+                <li><strong>Eustress:</strong> Eustress is a positive form of stress that arises from challenging but manageable situations, such as starting a new job, getting married, or pursuing personal goals. This type of positive stress can motivate and enhance performance. Even though eustress is a positive form of stress, it is still stress and can contribute to excess or prolonged stress responses.</li>
+
+                <li><strong>Distress:</strong> Distress is negative stress that arises from overwhelming situations, such as trauma, loss, or chronic health problems. It can lead to mental and physical health problems if not addressed.</li>
+
+                <li><strong>Post-Traumatic Stress Disorder (PTSD):</strong> PTSD is a specific type of stress reaction that occurs in response to a traumatic event. It involves recurring intrusive memories, nightmares, and severe emotional distress long after the traumatic incident.</li>
+
+                <li><strong>Burnout:</strong> Burnout is a form of chronic stress typically associated with work-related stressors, long-term health issues over time, and caregiver burnout. It involves physical and emotional exhaustion, reduced performance, and feelings of detachment.</li>
+
+            </ul>
+
+                <h2>Looking at Stress from Another Perspective</h2>
+                <p>Stressful situations and events are a fact of life. While we may not be able to change stressful situations and many facets of stress are out of our control, you can take steps to manage how stressors impact you. Managing different types of stress involves employing a range of strategies tailored to the specific stressor and its duration.
+
+                    Interestingly, new research on stress mindsets from Stanford University published in 2023 indicates that embracing the concept of stress can improve our quality of life. The research showed that <q>viewing stress as a helpful part of life, rather than harmful, is associated with better health, emotional well-being, and productivity ? even during periods of high stress.</q>
+
+                    The significance of one&#39;s perspective on stress lies in its influence on how individuals respond to stressors. When stress is perceived as harmful, it often leads to less constructive coping strategies, such as resorting to alcohol as a stress release, procrastinating to evade stress, or fixating on worst-case scenarios. A study has revealed that merely aiming to avoid stress can elevate the long-term risk of adverse outcomes like depression, divorce, and job loss, primarily due to the adoption of detrimental coping mechanisms. In contrast, embracing a more positive view of stress tends to foster coping approaches that promote personal growth, including confronting the stressor head-on, seeking support from others, or discovering meaning within the challenging experience.
+
+                    Stanford psychologist and author of the book The Upside of Stress, Kelly McGonigal, explains that in her research about stress mindsets, the most helpful and protective beliefs about stress are: 1) to view your body&#39;s stress response as helpful, not debilitating; 2) to view yourself as able to handle, and even learn and grow from, the stress in your life; and 3) to view stress as something everyone deals with, and not something that proves how uniquely screwed up you or your life is.</p>
+                 </div>
+            </div>
+            <a href="javascript:history.back()" class="back-button">&#8592; Go Back</a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+</div>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

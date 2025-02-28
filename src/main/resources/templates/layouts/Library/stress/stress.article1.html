@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - Managing Workplace Stress: Setting Boundaries and Avoiding Burnout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .img-top {
+            margin-left: 20%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+            padding-top: 4.5rem;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .library-ribbon {
+            padding: 1px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .library-ribbon .nav-pills .nav-link {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .library-ribbon .nav-pills .nav-link:hover,
+        .library-ribbon .nav-pills .nav-link:focus {
+            background-color: darkgreen;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<!-- header -->
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<div>
+
+    <div class="container">
+        <div class="article-container">
+            <div class="library-ribbon">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/library">Chapters</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/stress">Activities</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/stress_reading">Reading</a></li>
+                </ul>
+            <h1 class="article-title">Managing Workplace Stress: Setting Boundaries and Avoiding Burnout</h1>
+            <p class="article-meta">By <strong>John Davis</strong> | Published on <strong>February 19, 2025</strong></p>
+
+            <div class="article-content">
+                <img src="/images/stressedworker.jpg" class="img-top" alt="worker stressed at desk">
+                <p>In today's fast-paced work environment, managing stress is more important than ever. Overwhelming workloads, tight deadlines, and constant connectivity can contribute to burnout and reduced productivity. As the boundaries between work and personal life blur, it becomes essential to develop effective stress management strategies that not only boost efficiency but also protect your overall well-being.</p>
+
+                <h2>Setting Clear Boundaries</h2>
+                <p>One of the most effective ways to combat workplace stress is by setting clear boundaries. This might mean defining strict work hours, scheduling regular breaks, and learning to say no when your plate is full. Establishing these limits not only helps manage your workload but also communicates to colleagues and supervisors that your personal time is valuable. Consider using scheduling tools or setting up automated responses to reinforce these boundaries.</p>
+                <p>In addition, clear boundaries help create a focused work environment, reducing distractions and enabling you to fully engage during your designated work time. This dedicated focus can lead to increased productivity and a more balanced approach to daily tasks.</p>
+
+                <h2>Avoiding Burnout</h2>
+                <p>Burnout is more than just occasional fatigue; it is a state of physical, emotional, and mental exhaustion that can significantly impact your professional and personal life. Early signs include chronic tiredness, irritability, and difficulty concentrating. Recognizing these symptoms early on is critical to preventing a full-blown burnout.</p>
+                <p>Take proactive steps by integrating mindfulness exercises into your daily routine, taking short, restorative breaks, and delegating tasks when possible. Regular physical activity, proper nutrition, and sufficient sleep are also vital components of a burnout prevention plan. If you notice the signs of burnout, consider seeking support from colleagues, supervisors, or mental health professionals to address the issue before it escalates.</p>
+                <p>Employers can help too by fostering a supportive workplace culture that values self-care and offers resources for stress management. Flexible work arrangements and open communication about workload expectations can further reduce the risk of burnout across teams.</p>
+
+                <p>By setting clear boundaries and prioritizing self-care, you can create a healthier, more balanced work environment that promotes both personal well-being and long-term productivity. Remember, investing in your health is not a luxury? it's a necessity for sustained success in today's demanding work culture.</p>
+            </div>
+            </div>
+            <a href="javascript:history.back()" class="back-button">&#8592; Go Back</a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+</div>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

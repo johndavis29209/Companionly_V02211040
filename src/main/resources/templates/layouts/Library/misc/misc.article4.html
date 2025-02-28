@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - Social Anxiety vs. Shyness: Key Differences and How to Overcome Fear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .img-top {
+            margin-left: 20%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+            padding-top: 4.5rem;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .library-ribbon {
+            padding: 1px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .library-ribbon .nav-pills .nav-link {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .library-ribbon .nav-pills .nav-link:hover,
+        .library-ribbon .nav-pills .nav-link:focus {
+            background-color: darkgreen;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<!-- header -->
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<div>
+
+    <div class="container">
+        <div class="article-container">
+            <div class="library-ribbon">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/library">Chapters</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/disorders">Activities</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/misc_reading">Reading</a></li>
+                    <li>\</li>
+                </ul>
+            <h1 class="article-title">Social Anxiety vs. Shyness: Key Differences and How to Overcome Fear</h1>
+            <p class="article-meta">By <strong>John Davis</strong> | Published on <strong>February 28, 2025</strong></p>
+
+            <div class="article-content">
+                <img src="/images/shy.jpg" class="img-top" alt="Social Anxiety Illustration">
+                <p><strong>Social anxiety</strong> is a condition characterized by an intense fear of social situations and interactions, while shyness is generally seen as a personality trait marked by a temporary discomfort in social settings. Although they may seem similar, there are distinct differences that are important to understand.</p>
+
+                <p>Individuals with social anxiety experience overwhelming fear, self-consciousness, and apprehension about being judged or embarrassed in social interactions. This fear can lead to avoidance of social gatherings, which in turn limits personal and professional opportunities. In contrast, shyness is often less debilitating and may not prevent individuals from participating in social activities once they become comfortable.</p>
+
+                <p><strong>Key differences between social anxiety and shyness:</strong></p>
+                <ul>
+                    <li><strong>Intensity:</strong> Social anxiety causes severe distress, whereas shyness typically results in mild discomfort.</li>
+                    <li><strong>Impact on Daily Life:</strong> Social anxiety can significantly disrupt work, school, and personal relationships, while shyness is generally less impairing.</li>
+                    <li><strong>Duration:</strong> Social anxiety may persist long-term and require treatment, whereas shyness may diminish with time or familiarity.</li>
+                </ul>
+
+                <p>Treatment and coping strategies for social anxiety often involve a combination of professional help and self-guided practices. <strong>Cognitive Behavioral Therapy (CBT)</strong> is highly effective in helping individuals challenge and reframe negative thoughts about social interactions. In addition, exposure therapy encourages gradual participation in social situations to build confidence and reduce fear.</p>
+
+                <p>Other strategies to overcome social anxiety include:</p>
+                <ul>
+                    <li><strong>Mindfulness and Relaxation Techniques:</strong> Meditation, deep breathing, and progressive muscle relaxation can help reduce physiological symptoms of anxiety.</li>
+                    <li><strong>Social Skills Training:</strong> Developing communication skills and practicing social interactions in a controlled environment can build confidence.</li>
+                    <li><strong>Support Groups:</strong> Joining groups where individuals share similar experiences provides a safe space to express feelings and learn coping mechanisms.</li>
+                    <li><strong>Professional Counseling:</strong> Working with a therapist can offer personalized strategies to manage and eventually overcome anxiety.</li>
+                </ul>
+
+                <p>It is important to recognize that while shyness is a normal variation in personality, social anxiety is a clinical condition that may require treatment. Overcoming social anxiety involves acknowledging the problem, seeking help, and gradually challenging oneself to face feared situations. Even small steps can lead to significant improvements in confidence and overall quality of life.</p>
+
+                <p>Ultimately, whether you identify with social anxiety or shyness, understanding the differences is crucial to developing effective strategies for overcoming fear and building a more fulfilling social life. Remember, progress is a gradual process, and every effort made to face your fears is a step toward greater self-assurance and well-being.</p>
+            </div>
+        </div>
+
+        <a href="javascript:history.back()" class="back-button">&#8592; Go Back</a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+</div>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

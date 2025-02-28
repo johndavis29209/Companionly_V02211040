@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Companionly - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link th:href="@{/css/custom.css}" rel="stylesheet">
+
+    <style>
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .btn-custom {
+		    background: rgb(109, 207, 254);		  
+		    color: black; 
+		    padding: 15px 15px;
+		    text-align: center;
+		    font-size: 16px;
+		    transition: background-color 0.3s, color 0.3s;
+		    border-radius: 5px; 
+		    text-decoration: none;
+		    display: inline-block;
+		    margin-right: 50px; 
+		}
+			
+			.btn-custom:last-child {
+			    margin-right: 0; 
+ 		}
+		
+		        
+        
+		.btn-register:hover {
+		    color: rgb(77, 146, 20) !important;
+		    font-weight: bold;
+		    border-color: black; 
+		    background-color: transparent; 
+		}
+		
+		
+		.btn-login:hover {
+		    color: rgb(77, 146, 20) !important; 
+		    font-weight: bold;
+		    border-color: black; 
+		    background-color: transparent; 
+		}
+		       
+		      
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .navbar .btn-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar .search-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<body>
+
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <h1>Welcome to Companionly</h1>
+        <p>Your partner for mental health and well-being support</p>
+
+        <div>
+            <a th:href="@{/register}" class="btn btn-primary btn-lg btn-custom">Register</a>
+            <a th:href="@{/login}" class="btn btn-success btn-lg btn-custom">Login</a>
+        </div>
+    </div>
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+
+    </body>
+    <!-- Footer -->
+    <footer>
+        <p>Contact us at help@companionly.com | Copyright 2025</p>
+    </footer>
+
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</html>

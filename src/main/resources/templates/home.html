@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            margin: 0;
+            padding-top: 4.5rem; /* Ensure content starts below fixed navbar */
+        }
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .content {
+            flex: 1;
+        }
+        /* Carousel styling from second HTML */
+        #questionCarousel {
+            background-color: rgba(212, 212, 212, 0.9);
+            height: 35vh;
+            max-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: -8%;
+            margin-left: 2vh;
+            margin-right: 2vh;
+        }
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .carousel-item h3 {
+            color: #212529;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: #0dcaf0;
+            color: black;
+        }
+        .btn-outline-dark {
+            border-color: #00468b;
+            color: #00468b;
+            padding: 15px 15px;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-outline-dark:hover {
+            color: #fff !important;
+            border-color: #00468b;
+            background-color: #00468b;
+        }
+        .btn-check:checked + .btn-outline-dark {
+            background-color: #00468b;
+            color: white;
+            border-color: #00468b;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            height: 50%;
+            width: 50%;
+            background-size: auto;
+            filter: invert(1);
+        }
+        .carousel-control-prev {
+            top: 35%;
+            transform: translateY(-50%);
+            left: -70px;
+        }
+        .carousel-control-next {
+            top: 35%;
+            transform: translateY(-50%);
+            right: -70px;
+        }
+        nav.navbar {
+            margin-top: 0;
+        }
+        .navbar.fixed-top {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* Avatar & Onboarding Styles */
+        .avatar-container {
+            margin: 20px auto;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            z-index: 10;
+        }
+        .minimized-avatar {
+            width: 60px;
+            height: auto;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 50%;
+        }
+        .welcome-container {
+            margin-top: 2%;
+        }
+        .avatar-options {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+        }
+        .avatar-options button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #00468b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .avatar-options button:hover {
+            background-color: #006bb3;
+        }
+        /* Highlight for Tour */
+        .highlight {
+            border: 2px solid #ff9800;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+        }
+        /* Onboarding Modal */
+        .onboarding-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .onboarding-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            text-align: center;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .skip-btn {
+            background-color: #f0f0f0;
+            color: #00468b;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .skip-btn:hover {
+            background-color: #00468b;
+            color: white;
+        }
+        .admin-btn {
+            background-color: rgb(109, 207, 254);
+            color: white;
+            padding: 15px 15px;
+            border-radius: 5px;
+            border-color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .admin-btn:hover {
+            color: black !important;
+            border-color: black;
+            background-color: transparent;
+        }
+        .btn-emergency {
+            background-color: Red;
+            color: white;
+            border: 2px solid #dc3545;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 5px 10px;
+            white-space: nowrap;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-emergency:hover {
+            background-color: #dc3545;
+            color: black;
+            text-decoration: none;
+        }
+        .dropdown-menu {
+            color: black;
+            background-color: darkgrey;
+            opacity: 0.85;
+        }
+        .dropdown-menu:hover a{
+            color: black;
+        }
+        a {
+            color: grey;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- Fixed Navbar for use with onboarding -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/home">Companionly</a>
+
+        <!-- Toggler for mobile -->
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Left: Nav items -->
+            <ul class="navbar-nav ms-3">
+                <li class="nav-item">
+                    <a id="home-button" class="nav-link active" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a id="account-button" class="nav-link" href="/login">Account</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                            id="portal-button"
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Portal
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="portal-button">
+                        <li><a class="dropdown-item" href="/forum">Forums</a></li>
+                        <li><a class="dropdown-item" href="/mood">Mood Tracker</a></li>
+                        <li><a class="dropdown-item" href="/library">Library</a></li>
+                        <li><a class="dropdown-item" href="/chat">Chat</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Center: Search -->
+            <form class="d-flex mx-auto" role="search" style="width: 250px;">
+                <input
+                        id="search-bar"
+                        class="form-control"
+                        type="search"
+                        placeholder="Search..."
+                        aria-label="Search"
+                        oninput="searchFunction()"
+                >
+            </form>
+
+            <!-- Right: Buttons -->
+            <div class="btn-container d-flex align-items-center ms-3">
+                <button class="btn btn-emergency me-2" type="button">Get Help Now</button>
+                <a href="/list_users" class="admin-btn">Admin</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Welcome Section -->
+<div class="welcome-container">
+    <h1 th:if="${username != null}">
+        Welcome, <span th:text="${firstName}"></span> <span th:text="${lastName}"></span>!
+    </h1>
+    <h1 th:if="${username == null}">You are not logged in.</h1>
+</div>
+
+<!-- Avatar Section -->
+<div class="avatar-container" id="avatarContainer">
+    <img src="/images/avatar.png" alt="Avatar: Man Waving" id="companionlyAvatar"/>
+    <p>Click the avatar for help or guidance!</p>
+</div>
+
+<!-- Avatar Options (initially hidden) -->
+<div class="avatar-options" id="avatarOptions">
+    <button id="startNewTourBtn">Start a New Tour</button>
+    <button id="askHowCanIHelpBtn">How can I help you today?</button>
+    <button id="getHelpBtn">Get Help with Resources</button>
+    <button id="oopsNevermindBtn">Oops, nevermind</button>
+</div>
+
+<!-- Rewards Card -->
+<div th:if="${username != null}" style="margin: 20px;">
+    <div id="companionly-points" class="card" style="width: 24rem; background-color: rgba(250, 250, 250, 0.8); padding: 20px; text-align: center">
+        <div class="card-body">
+            <h5 class="card-title" style="font-weight: bold">Companionly Points</h5>
+            <p class="card-text">
+                You currently have <span th:text="${points}" style="text-decoration: underline; text-decoration-color: black;"></span> points
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Page Content and Questionnaire Carousel -->
+<div class="page-container">
+    <div class="content">
+        <!-- Additional content can be placed here -->
+    </div>
+    <div class="carousel slide" id="questionCarousel" data-bs-interval="false" data-bs-wrap="true">
+        <div class="carousel-inner">
+            <div th:each="question, iterStat : ${questions}" class="carousel-item" th:classappend="${iterStat.first} ? 'active'">
+                <h3><span th:text="${question.question}"></span></h3>
+                <div class="btn-group">
+                    <input type="radio" class="btn-check" th:id="'q' + ${iterStat.index} + '-btn1'" th:name="'question_' + ${iterStat.index}" data-question="${iterStat.index}" data-value="0">
+                    <label class="btn btn-outline-dark" th:for="'q' + ${iterStat.index} + '-btn1'">Not at all</label>
+                    <input type="radio" class="btn-check" th:id="'q' + ${iterStat.index} + '-btn2'" th:name="'question_' + ${iterStat.index}" data-question="${iterStat.index}" data-value="1">
+                    <label class="btn btn-outline-dark" th:for="'q' + ${iterStat.index} + '-btn2'">Several days</label>
+                    <input type="radio" class="btn-check" th:id="'q' + ${iterStat.index} + '-btn3'" th:name="'question_' + ${iterStat.index}" data-question="${iterStat.index}" data-value="2">
+                    <label class="btn btn-outline-dark" th:for="'q' + ${iterStat.index} + '-btn3'">More than half the days</label>
+                    <input type="radio" class="btn-check" th:id="'q' + ${iterStat.index} + '-btn4'" th:name="'question_' + ${iterStat.index}" data-question="${iterStat.index}" data-value="3">
+                    <label class="btn btn-outline-dark" th:for="'q' + ${iterStat.index} + '-btn4'">Nearly every day</label>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="text-center mt-4">
+            <button id="submitBtn" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Onboarding Modal -->
+<div class="onboarding-modal" id="onboarding-modal">
+    <div class="onboarding-content">
+        <h2>Welcome to Companionly!</h2>
+        <p>Let me show you around the site.</p>
+        <button onclick="startOnboarding()">Start Onboarding</button>
+        <button class="skip-btn" onclick="skipOnboarding()">Skip</button>
+        <span class="close-btn" onclick="closeOnboarding()">X</span>
+    </div>
+</div>
+
+<!-- Modal for Library Article Recommendation -->
+<div class="modal fade" id="recommendationModal" tabindex="-1" aria-labelledby="recommendationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recommendationModalLabel">Recommended Reading</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="articlePreviewContainer" style="display: none;">
+                    <iframe id="articleIframe" style="border: 0; width: 100%; height: 600px;"></iframe>
+                </div>
+                <div id="recommendationMessage" style="display: none; font-size: 1.2em; padding: 20px;"></div>
+            </div>
+            <div class="modal-footer">
+                <a id="openFullArticleLink" class="btn btn-primary" href="#" target="_self" style="display: none;">Open Full Article</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div th:replace="~{layouts/commonFooter :: footer}"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Avatar Minimization and Help Options
+        const avatarContainer = document.getElementById('avatarContainer');
+        const avatar = document.getElementById('companionlyAvatar');
+        const avatarOptions = document.getElementById('avatarOptions');
+        let isMinimized = false;
+
+        // On page load, minimize the avatar and show a one-time message.
+        minimizeAvatar();
+        alert("Hi, I'm here to help. Click me if you need anything!");
+
+        avatar.addEventListener('click', function() {
+            if (isMinimized) {
+                maximizeAvatar();
+                displayAvatarOptions();
+            } else {
+                avatarOptions.style.display = 'none';
+                minimizeAvatar();
+            }
+        });
+
+        function minimizeAvatar() {
+            avatar.classList.add('minimized-avatar');
+            isMinimized = true;
+        }
+
+        function maximizeAvatar() {
+            avatar.classList.remove('minimized-avatar');
+            isMinimized = false;
+        }
+
+        function displayAvatarOptions() {
+            avatarOptions.style.display = 'block';
+        }
+
+        // Option button event listeners
+        document.getElementById('startNewTourBtn').addEventListener('click', function() {
+            avatarOptions.style.display = 'none';
+            startTour();
+        });
+
+        document.getElementById('askHowCanIHelpBtn').addEventListener('click', function() {
+            avatarOptions.style.display = 'none';
+            alert('I can help you navigate the site or answer your questions!');
+        });
+
+        document.getElementById('getHelpBtn').addEventListener('click', function() {
+            avatarOptions.style.display = 'none';
+            window.location.href = "/library";
+        });
+
+        document.getElementById('oopsNevermindBtn').addEventListener('click', function() {
+            avatarOptions.style.display = 'none';
+            minimizeAvatar();
+        });
+
+        // Onboarding / Tour functionality
+        let tourStep = 0;
+        const steps = [
+            { element: '#home-button', message: 'This is the Home button. Click to go to the homepage!' },
+            { element: '#account-button', message: 'This is your Account button, where you can manage your account.' },
+            { element: '#portal-button', message: 'Here is your Portal button where you can access forums, mood tracker, library, and chat.' },
+            { element: '#search-bar', message: 'This is the Search bar. Use it to find resources or topics!' },
+            { element: '#companionly-points', message: 'Your Companionly Points are displayed here. Earn points as you engage!' }
+        ];
+
+        window.startOnboarding = function() {
+            alert('Onboarding Started!');
+            tourStep = 0;
+            highlightElement(steps[tourStep]);
+        };
+
+        window.skipOnboarding = function() {
+            document.getElementById('onboarding-modal').style.display = 'none';
+        };
+
+        window.closeOnboarding = function() {
+            document.getElementById('onboarding-modal').style.display = 'none';
+        };
+
+        function startTour() {
+            alert('Tour Started!');
+            tourStep = 0;
+            highlightElement(steps[tourStep]);
+        }
+
+        function nextStep() {
+            tourStep++;
+            if (tourStep < steps.length) {
+                highlightElement(steps[tourStep]);
+            } else {
+                alert('Tour completed!');
+                displayAvatarOptions();
+            }
+        }
+
+        function highlightElement(step) {
+            // Remove old highlights
+            document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
+
+            // If the next step is the search bar and we're on mobile, open the navbar
+            if (step.element === '#search-bar') {
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbarToggler && window.innerWidth < 992) {
+                    navbarToggler.click(); // Open the collapsible navbar
+                }
+            }
+
+            const element = document.querySelector(step.element);
+            if (element) {
+                element.classList.add('highlight');
+                alert(step.message);
+            } else {
+                console.error(`Element ${step.element} not found!`);
+            }
+
+            setTimeout(nextStep, 3000);
+        }
+
+        // Questionnaire JavaScript
+        const articleLinks = [
+            "/anxiety_article0?embed=true",
+            "/anxiety_article1?embed=true",
+            "/anxiety_article2?embed=true",
+            "/anxiety_article3?embed=true",
+            "/anxiety_article4?embed=true",
+            "/stress_article0?embed=true",
+            "/stress_article1?embed=true",
+            "/stress_article2?embed=true",
+            "/stress_article3?embed=true",
+            "/stress_article4?embed=true",
+            "/depression_article0?embed=true",
+            "/depression_article1?embed=true",
+            "/depression_article2?embed=true",
+            "/depression_article3?embed=true",
+            "/depression_article4?embed=true",
+            "/misc_article0?embed=true",
+            "/misc_article1?embed=true",
+            "/misc_article2?embed=true",
+            "/misc_article3?embed=true",
+            "/misc_article4?embed=true"
+        ];
+
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            let totalScore = 0;
+            document.querySelectorAll('.btn-check:checked').forEach((input) => {
+                totalScore += parseInt(input.getAttribute('data-value'));
+            });
+
+            const recommendationModal = new bootstrap.Modal(document.getElementById('recommendationModal'));
+            const articlePreviewContainer = document.getElementById('articlePreviewContainer');
+            const recommendationMessage = document.getElementById('recommendationMessage');
+            const openLink = document.getElementById('openFullArticleLink');
+
+            if (totalScore > 9) {
+                const randomIndex = Math.floor(Math.random() * articleLinks.length);
+                const randomArticleUrl = articleLinks[randomIndex];
+                document.getElementById('articleIframe').src = randomArticleUrl;
+                const fullArticleUrl = randomArticleUrl.split('?')[0];
+                openLink.href = fullArticleUrl;
+                articlePreviewContainer.style.display = 'block';
+                recommendationMessage.style.display = 'none';
+                openLink.style.display = 'inline-block';
+            } else {
+                recommendationMessage.textContent = "Thanks for taking our survey! Feel free to check out our Forums or Mood Tracker!";
+                articlePreviewContainer.style.display = 'none';
+                recommendationMessage.style.display = 'block';
+                openLink.style.display = 'none';
+            }
+
+            recommendationModal.show();
+        });
+    });
+</script>
+</body>
+</html>

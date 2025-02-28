@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Companionly - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link th:href="@{/css/custom.css}" rel="stylesheet">
+    <style>
+
+         .error-message {
+        color: red;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold; 
+    }
+    
+    	.btn-custom:hover {
+		    color: rgb(17, 244, 51) !important;
+		    border-color: black; 
+		    background-color: transparent; 
+		}
+    </style>
+</head>
+<body>
+    <!-- Common Header -->
+    <div th:replace="layouts/commonHeader :: header"></div>
+
+    <!-- Signup Form -->
+    <div class="signup-container" layout:fragment="content">
+        <form th:action="@{/process_register}" method="post" class="login-form" th:object="${user}">
+            <div class="create-an-account-message" style="text-align: center; margin-bottom: 20px;">
+	    <h2>Join Us</h2>
+	    <p>Start your path to a brighter, healthier future today.</p>
+	       </div>     	 
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" th:field="*{email}" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" th:field="*{password}" id="password" placeholder="Password" required minlength="6" maxlength="10">
+            </div>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" th:field="*{firstName}" id="firstName" placeholder="First Name" required minlength="2" maxlength="20">
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" th:field="*{lastName}" id="lastName" placeholder="Last Name" required minlength="2" maxlength="20">
+                	<div class="error-message" th:if="${errorMessage}" th:text="${errorMessage}"></div>
+            </div>
+            <div class="button-container" style="display: flex; justify-content: center;">
+                <button type="submit" class="btn btn-custom">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Common Footer -->
+    <div th:replace="layouts/commonFooter :: footer"></div>
+    <footer>
+        <p>Contact us at help@companionly.com | Copyright 2025</p>
+    </footer>
+
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

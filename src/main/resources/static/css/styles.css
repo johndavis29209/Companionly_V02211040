@@ -1,0 +1,248 @@
+
+Styles.css
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f3f4f6!important;
+    color: black;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: rgb(0,70,139, 0.9);
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5%;
+}
+
+
+a {
+    color: rgb(0,70,139, 0.9);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    background-color: rgb(0,80,139, 0.9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgb(211,211,211, 0.9%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: rgb(0,70,139, 0.9);
+    color: white;
+    font-weight: bold;
+	
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(0,80,139, 0.9);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.actions a:hover {
+    background-color: steelblue;
+}
+
+.actions a.delete {
+    background-color: #e74c3c;
+}
+
+.actions a.delete:hover {
+    background-color: palevioletred;
+}
+
+.add-mood-container {
+    text-align: center;
+    margin:10px 0; 
+}
+
+.add-mood-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+  
+}
+
+.add-mood-link:hover {
+    background-color: rgb(0,80,139, 0.9);
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0,70,139, 0.9);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link:hover {
+    background-color: rgb(0,80,139, 0.9);
+}
+
+.stats-link {
+	 display: inline-block;
+	    padding: 10px 20px;
+	    background-color: rgb(0,70,139, 0.9);
+	    color: white;
+	    text-decoration: none;
+	    border-radius: 5px;
+	    font-size: 1.2em;
+	    margin-top: 20px;
+	    text-align: center;
+	}
+	
+.stats-link:hover 	{
+	    background-color: rgb(0,80,139, 0.9);
+	}
+
+	.popup-modal {
+	    display: none;  /* Hidden by default */
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay */
+	    justify-content: center;
+	    align-items: center;
+	    z-index: 9999;  /* Make sure it appears on top */
+	}
+
+	/* Popup Content */
+	.popup-content {
+	    background-color: white;
+	    padding: 20px;
+	    border-radius: 8px;
+	    width: 300px;
+	    text-align: center;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Close Button */
+	.close-btn {
+	    color: #aaa;
+	    font-size: 28px;
+	    font-weight: bold;
+	    position: absolute;
+	    top: 10px;
+	    right: 20px;
+	}
+
+	.close-btn:hover,
+	.close-btn:focus {
+	    color: black;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	button {
+	    background-color: rgb(0,95,139, 0.9);
+	    color: white;
+	    padding: 10px 20px;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+	}
+
+	button:hover {
+	    background-color: steelblue;
+	}
+	
+
+
+	

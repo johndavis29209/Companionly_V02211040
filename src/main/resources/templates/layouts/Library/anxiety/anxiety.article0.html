@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - Anxiety</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .img-top {
+            margin-left: 20%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+            padding-top: 4.5rem;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .library-ribbon {
+            padding: 1px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .library-ribbon .nav-pills .nav-link {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .library-ribbon .nav-pills .nav-link:hover,
+        .library-ribbon .nav-pills .nav-link:focus {
+            background-color: darkgreen;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<!-- header -->
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<div>
+
+    <div class="container">
+        <div class="article-container">
+            <div class="library-ribbon">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/library">Chapters</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/anxiety">Activities</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/anxiety_reading">Reading</a></li>
+                    <li>\</li>
+                </ul>
+            <h1 class="article-title">Understanding Anxiety: Causes, Symptoms, and When to Seek Help</h1>
+            <p class="article-meta">By <strong>John Davis</strong> | Published on <strong>February 18, 2025</strong></p>
+
+            <div class="article-content">
+                <img src="/images/scream.jpg" class="img-top" alt="the scream by Munch">
+                <p>Anxiety is an emotion characterized by an unpleasant state of inner turmoil and includes feelings of dread over anticipated events. Anxiety is different from fear in that fear is defined as the emotional response to a present threat, whereas anxiety is the anticipation of a future one. It is often accompanied by nervous behavior such as pacing back and forth, somatic complaints, and rumination.</p>
+
+                <p>Common symptoms of anxiety include:
+                <ul>
+                    <li>Muscular tension</li>
+                    <li>Restlessness</li>
+                    <li>Fatigue</li>
+                    <li>Inability to catch one's breath</li>
+                    <li>Tightness in the abdominal region</li>
+                    <li>Nausea</li>
+                    <li>Problems in concentration</li>
+                </ul>
+                </p>
+
+                <p>Fear and anxiety can be differentiated into four domains:
+                <ul>
+                    <li>Duration of emotional experience</li>
+                    <li>Temporal focus</li>
+                    <li>Specificity of the threat</li>
+                    <li>Motivated direction</li>
+                </ul>
+                </p>
+
+                <p>The physiological symptoms of anxiety may include:
+                <ul>
+                    <li><strong>Neurological:</strong> Headache, paresthesias, fasciculations, vertigo, or presyncope.</li>
+                    <li><strong>Digestive:</strong> Abdominal pain, nausea, diarrhea, indigestion, dry mouth.</li>
+                    <li><strong>Respiratory:</strong> Shortness of breath or sighing breathing.</li>
+                    <li><strong>Cardiac:</strong> Palpitations, tachycardia, or chest pain.</li>
+                    <li><strong>Muscular:</strong> Fatigue, tremors, or tetany.</li>
+                    <li><strong>Cutaneous:</strong> Perspiration, or itchy skin.</li>
+                    <li><strong>Uro-genital:</strong> Frequent urination, urinary urgency, dyspareunia, or impotence.</li>
+                </ul>
+                </p>
+
+                <p>Treatment options for anxiety include:
+                <ul>
+                    <li><strong>Cognitive Behavioral Therapy (CBT):</strong> Effective for anxiety disorders and often considered a first-line treatment.</li>
+                    <li><strong>Psychotherapy:</strong> Interpersonal psychotherapy addresses issues by improving communication and relationship skills.</li>
+                    <li><strong>Medication:</strong>
+                        <ul>
+                            <li>Selective serotonin reuptake inhibitors (SSRIs) and serotonin-norepinephrine reuptake inhibitors (SNRIs).</li>
+                            <li>Benzodiazepines, which produce an anxiolytic response by modulating GABA.</li>
+                            <li>Serotonin agonists, which increase serotonin action.</li>
+                            <li>Other options include pregabalin, tricyclic antidepressants, and moclobemide.</li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+
+                <p>Anxiety is considered a serious psychiatric illness that often goes undiagnosed due to affected individuals not seeking treatment or professionals missing the diagnosis.</p>
+            </div>
+            </div>
+            <a href="javascript:history.back()" class="back-button">&#8592; Go Back</a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+</div>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

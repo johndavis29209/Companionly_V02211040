@@ -1,0 +1,20 @@
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore Windows system files
+NTUSER.DAT
+NTUSER.DAT.LOG*
+desktop.ini
+Thumbs.db
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore build directories
+target/
+node_modules/

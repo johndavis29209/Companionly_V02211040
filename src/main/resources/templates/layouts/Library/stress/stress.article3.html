@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - How Sleep and Stress Are Connected</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .img-top {
+            margin-left: 20%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+            padding-top: 4.5rem;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .library-ribbon {
+            padding: 1px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .library-ribbon .nav-pills .nav-link {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .library-ribbon .nav-pills .nav-link:hover,
+        .library-ribbon .nav-pills .nav-link:focus {
+            background-color: darkgreen;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<!-- header -->
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<div>
+
+    <div class="container">
+        <div class="article-container">
+            <div class="library-ribbon">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/library">Chapters</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/stress">Activities</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/stress_reading">Reading</a></li>
+                </ul>
+            <h1 class="article-title">How Sleep and Stress Are Connected</h1>
+            <p class="article-meta">By <strong>John Davis</strong> | Published on <strong>February 19, 2025</strong></p>
+
+            <div class="article-content">
+                <img src="/images/sleep.jpg" class="img-top" alt="Sleep and Stress">
+                <p>The relationship between sleep and stress is complex and bidirectional. Poor sleep can exacerbate stress levels, and high stress can in turn lead to difficulties in falling and staying asleep.</p>
+                <h2>The Impact of Stress on Sleep</h2>
+                <p>Stress triggers the release of hormones such as cortisol, which can interfere with your body&#39;s natural sleep cycle. This can lead to insomnia and other sleep disturbances.</p>
+                <p>Additionally, stress can cause racing thoughts and anxiety that make it hard to relax, creating a vicious cycle where poor sleep further increases stress levels.</p>
+                <h2>Improving Sleep to Reduce Stress</h2>
+                <p>Establishing a calming bedtime routine and creating a sleep-friendly environment are essential steps in breaking the cycle of stress and poor sleep. Techniques such as mindfulness and relaxation exercises can also be beneficial.</p>
+                <ul>
+                    <li><strong>Establish a Regular Sleep Schedule:</strong> Aim to go to bed and wake up at the same time every day.</li>
+                    <li><strong>Create a Relaxing Pre-Sleep Routine:</strong> Engage in calming activities such as reading or meditation before bed.</li>
+                    <li><strong>Limit Exposure to Screens:</strong> Avoid using electronic devices at least one hour before sleep to reduce blue light exposure.</li>
+                    <li><strong>Practice Stress-Reduction Techniques:</strong> Techniques like deep breathing, mindfulness, and progressive muscle relaxation can help calm your mind.</li>
+                    <li><strong>Optimize Your Sleep Environment:</strong> Keep your bedroom cool, dark, and quiet to encourage better sleep.</li>
+                </ul>
+
+                <p>By addressing both sleep and stress together, you can improve your overall well-being and create a more balanced lifestyle.</p>
+            </div>
+            </div>
+            <a href="javascript:history.back()" class="back-button">&#8592; Go Back</a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+</div>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

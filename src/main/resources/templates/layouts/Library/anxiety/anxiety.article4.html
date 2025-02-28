@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companionly - Anxiety</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .img-top {
+            margin-left: 20%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+            padding-top: 4.5rem;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .library-ribbon {
+            padding: 1px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .library-ribbon .nav-pills .nav-link {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .library-ribbon .nav-pills .nav-link:hover,
+        .library-ribbon .nav-pills .nav-link:focus {
+            background-color: darkgreen;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<!-- header -->
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+<div>
+
+    <div class="container">
+        <div class="article-container">
+            <div class="library-ribbon">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/library">Chapters</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/anxiety">Activities</a></li>
+                    <li>\</li>
+                    <li class="nav-item"><a class="nav-link" href="/anxiety_reading">Reading</a></li>
+                    <li>\</li>
+
+                </ul>
+            <h1 class="article-title">Breaking the Cycle: How to Overcome Negative Thinking Patterns</h1>
+            <p class="article-meta">By <strong>John Davis</strong> | Published on <strong>February 18, 2025</strong></p>
+
+            <div class="article-content">
+                <img src="/images/breaking.jpg" class="img-top" alt="Breaking negative thinking patterns">
+                <p>Negative thinking patterns can trap us in cycles of self-doubt and anxiety. Recognizing and changing these patterns is key to improving mental well-being.</p>
+
+                <h2>Common Negative Thinking Patterns</h2>
+                <ul>
+                    <li><strong>All-or-Nothing Thinking:</strong> Viewing situations as entirely good or bad with no middle ground.</li>
+                    <li><strong>Overgeneralization:</strong> Assuming one negative event means repeated failure.</li>
+                    <li><strong>Mind Reading:</strong> Believing you know what others are thinking, usually assuming the worst.</li>
+                    <li><strong>Catastrophizing:</strong> Expecting the worst-case scenario in every situation.</li>
+                </ul>
+
+                <h2>Steps to Overcome Negative Thinking</h2>
+                <ul>
+                    <li><strong>Identify Negative Thoughts:</strong> Keep track of recurring negative thoughts in a journal.</li>
+                    <li><strong>Challenge Unhelpful Beliefs:</strong> Ask yourself whether the thought is realistic or based on facts.</li>
+                    <li><strong>Replace with Positive Alternatives:</strong> Reframe your thinking to focus on constructive solutions.</li>
+                    <li><strong>Practice Self-Compassion:</strong> Treat yourself with kindness rather than self-criticism.</li>
+                </ul>
+
+                <h2>Techniques to Maintain Positive Thinking</h2>
+                <ul>
+                    <li><strong>Gratitude Exercises:</strong> Reflect daily on things you appreciate in life.</li>
+                    <li><strong>Mindfulness and Meditation:</strong> Stay present and focused rather than ruminating on negative thoughts.</li>
+                    <li><strong>Surround Yourself with Positivity:</strong> Engage with people and activities that uplift you.</li>
+                    <li><strong>Seek Professional Support:</strong> Therapy or counseling can provide valuable tools for changing thought patterns.</li>
+                </ul>
+            </div>
+            </div>
+
+            <a href="javascript:history.back()" class="back-button">&#8592; Go Back</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div th:replace="~{layouts/commonFooter :: footer}"></div>
+
+</div>
+</div>
+</body>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</html>

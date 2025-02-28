@@ -1,0 +1,110 @@
+<div th:fragment="header">
+    <div th:if="${param.embed == null or param.embed[0] != 'true'}">
+        <head>
+            <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+            <style>
+                .navbar {
+                    background-color: #343a40;
+                }
+                .navbar-brand {
+                    font-family: 'Great Vibes', cursive;
+                }
+                .navbar, .btn-custom {
+                    font-family: 'Poppins', sans-serif;
+                }
+                .navbar .btn-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .navbar .search-container {
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: center;
+                }
+                .admin-btn {
+                    background-color: rgb(109, 207, 254);
+                    color: white;
+                    padding: 15px 15px;
+                    border-radius: 5px;
+                    border-color: black;
+                    text-decoration: none;
+                    font-size: 16px;
+                }
+                .admin-btn:hover {
+                    color: black !important;
+                    border-color: black;
+                    background-color: transparent;
+                }
+                .btn-emergency {
+                    background-color: Red;
+                    color: white;
+                    border: 2px solid #dc3545;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    padding: 5px 10px;
+                    white-space: nowrap;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+                .btn-emergency:hover {
+                    background-color: #dc3545;
+                    color: black;
+                    text-decoration: none;
+                }
+                .dropdown-menu {
+                    color: black;
+                    background-color: grey;
+                    opacity: 0.85;
+                }
+            </style>
+        </head>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/home">Companionly</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login/processLogin">Account</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Portal
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/forum">Forums</a></li>
+                                <li><a class="dropdown-item" href="/mood">Mood Tracker</a></li>
+                                <li><a class="dropdown-item" href="/library">Library</a></li>
+                                <li><a class="dropdown-item" href="/chat">Chat</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Centered Search Bar -->
+                    <div class="search-container">
+                        <form class="d-flex align-items-center" role="search" style="gap: 0;">
+                            <input class="form-control me-1" type="search" placeholder="How can we help you today?"
+                                   aria-label="How can we help you today?"
+                                   style="width: 500px; max-width: 500px; margin-left:10%; margin-right:10%; display: block;
+                            text-align: center; position: relative; right: 50px"
+                                   onfocus="this.placeholder=''" onblur="this.placeholder = 'Search'">
+                        </form>
+                    </div>
+                    <!-- Admin Button and Get Help Button -->
+                    <div class="btn-container">
+                        <button class="btn btn-emergency" type="button" style="margin-right: 10px;">Get Help Now</button>
+                        <a href="/list_users" class="admin-btn">Admin</a>
+                    </div>
+                </div>
+            </div>
+            <div th:replace="~{layouts/commonFooter :: footer}"></div>
+        </nav>
+    </div>
+</div>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>

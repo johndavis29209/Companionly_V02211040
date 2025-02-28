@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <title>Mood Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            padding-top: 8.2rem;
+
+        }
+        .mood-chart {
+            background-color: white;
+            margin-top: 5%;
+            width: 80%;
+            max-height: 60%;
+            margin-right: 10%;
+            margin-left: 10%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="~{layouts/commonHeader :: header}"></div>
+
+<div class="mood-chart">
+<header>Mood Statistics</header>
+
+<p>Average Mood: <span th:text="${averageMood}"></span></p>
+
+<p>Best Mood Day: <span th:if="${bestMoodDay != null}" th:text="${bestMoodDay.date + ' (Mood: ' + bestMoodDay.mood + ')'}"></span></p>
+
+<p>Worst Mood Day: <span th:if="${worstMoodDay != null}" th:text="${worstMoodDay.date + ' (Mood: ' + worstMoodDay.mood + ')'}"></span></p>
+
+<canvas id="moodChart"></canvas>
+</div>
+<a href="/mood" class="back-link">Back to Mood Tracker</a>
+
+
+<div th:replace="~{layouts/commonFooter :: footer}"></div>
+
+
+<script th:inline="javascript">
+    /* Convert Java objects to JSON for JavaScript */
+	var moodData = /*[[${moods}]]*/ [];
+	var labels = moodData.map(m => m.date);
+	var data = moodData.map(m => m.mood);
+
+    var ctx = document.getElementById('moodChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Mood Over Time',
+                data: data,
+                borderColor: 'cadetblue',
+                fill: false
+            }]
+        }
+    });
+</script>
+
+</body>
+
+</html>
+
