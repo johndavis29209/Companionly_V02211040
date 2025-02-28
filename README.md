@@ -1,7 +1,6 @@
 # Companionly_V02211040
 
-# Visit our website
-awesome-chess-447016-v7.wl.r.appspot.com/
+# <a href="awesome-chess-447016-v7.wl.r.appspot.com/">Visit our website<a>
 
 # Introduction
 The Companionly app aims to bridge the gap between individuals and mental health resources, offering a user-friendly, evidence-based platform to help users manage their mental well-being. With tools for mood tracking, mindfulness exercises, and crisis support, Companionly addresses the growing need for mental health interventions in an accessible, safe, and discreet manner. 
