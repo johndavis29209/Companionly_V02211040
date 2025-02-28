@@ -86,8 +86,10 @@ By focusing on **accessibility, scalability, and user-centered design**, Compani
 ✅ **Additional mental health assessments**  
 
 Despite challenges, Companionly is **feature-packed, useful to the public, and ready for real-world deployment**. We are pleased with our product and hope you enjoy our presentation! 🎉
-![Demo of application]{Screencast_20250228_014510.mp4}
 ---
+
+![Demo of application]{Screencast_20250228_014510.mp4}
+
 
 ## 📚 References
 1. Rajeev, A. (2021). *Build a Spring Boot chat app with TalkJS.* TalkJS.  
