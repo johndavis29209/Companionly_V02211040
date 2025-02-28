@@ -1,4 +1,4 @@
-# **Companionly_V02211040**
+# **Companionly**
 
 ## 🌐 [Live App](https://awesome-chess-447016-v7.wl.r.appspot.com/)
 
